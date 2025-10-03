@@ -4,13 +4,13 @@ public class Main {
         //System.out.println("Wynagrodzenie: " + f.calculateSalary());
 
         Student Maciek = new Student(2, 3, 5, 4, 2);
-        System.out.println("Srednia ocen: " + Maciek.liczSrednia());
+        System.out.println("Srednia ocen: " + Maciek.liczSrednia() + ", " + Maciek.czyZdaje());
 
         Student Biktor = new Student(1, 2, 1, 1, 2);
-        System.out.println("Srednia ocen: " + Biktor.liczSrednia());
+        System.out.println("Srednia ocen: " + Biktor.liczSrednia() + ", " + Biktor.czyZdaje());
 
         Student Gejcys = new Student(6, 9, 6, 7, 2);
-        System.out.println("Srednia ocen: " + Gejcys.liczSrednia());
+        System.out.println("Srednia ocen: " + Gejcys.liczSrednia() + ", " + Gejcys.czyZdaje());
 
         Teacher Oliwier = new Teacher(30.50, 160, 200);
         System.out.println("Wynagrodzenie nauczyciela: " + Oliwier.calculateSalary());

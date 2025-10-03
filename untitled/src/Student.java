@@ -1,26 +1,38 @@
+import java.util.List;
+
 public class Student extends Person implements Srednia
 {
 
-    private int ocena1;
-    private int ocena2;
-    private int ocena3;
-    private int ocena4;
-    private int ocena5;
+    private List<Integer> oceny;
     private double srednia;
 
-    public Student(int ocena1, int ocena2, int ocena3, int ocena4, int ocena5)
+    public Student(List<Integer> oceny)
     {
-        this.ocena1 = ocena1;
-        this.ocena2 = ocena2;
-        this.ocena3 = ocena3;
-        this.ocena4 = ocena4;
-        this.ocena5 = ocena5;
+        this.oceny = oceny;
     }
 
     @Override
     public double liczSrednia()
     {
-        srednia = (double) (ocena1 + ocena2 + ocena3 + ocena4 + ocena5) / 5;
-        return srednia;
+        int x = 5;
+        int wyjmijZListy = 0;
+        for(int i = 0; i < x; i++)
+        {
+            oceny.get(i) += wyjmijZListy;
+            srednia = (double) wyjmijZListy / 5;
+            return srednia;
+        }
+    }
+
+    public String czyZdaje()
+    {
+        if(srednia > 1.75)
+        {
+            return "Uczeń zdaje";
+        }
+        else
+        {
+            return "Uczeń nie zdaje";
+        }
     }
 }
